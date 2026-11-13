@@ -1363,9 +1363,13 @@
                 box-shadow: 0 0 0 calc(var(--s) * 3px) rgba(120,190,255,.7)
             }
 
-            .cust-img.locked {
+            .cust-img:not(.filled) {
+                visibility: hidden;
                 pointer-events: none;
-                cursor: default
+            }
+            .edit-on .cust-img:not(.filled) {
+                visibility: visible;
+                pointer-events: auto;
             }
 
             .cust-img.light {
